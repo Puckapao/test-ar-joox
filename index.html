@@ -39,7 +39,6 @@
             // load the .pngs
             let loader = new THREE.TextureLoader();
             this.pngArray = [];
-            this.isFound = false;
             let dvd_loop = 51;
             for (var i = 0; i < dvd_loop; i++) {
                 if (i < 10) {
@@ -71,7 +70,6 @@
             // load the .pngs
             let loader = new THREE.TextureLoader();
             this.pngArray = [];
-            this.isFound = false;
             let buzz_loop = 51;
             for (var i = 0; i < buzz_loop; i++) {
                 if (i < 10) {
@@ -103,7 +101,6 @@
             // load the .pngs
             let loader = new THREE.TextureLoader();
             this.pngArray = [];
-            this.isFound = false;
             let guitar_loop = 46;
             for (var i = 0; i < guitar_loop; i++) {
                 if (i < 10) {
@@ -135,7 +132,6 @@
             // load the .pngs
             let loader = new THREE.TextureLoader();
             this.pngArray = [];
-            this.isFound = false;
             let kiss_loop = 24;
             for (var i = 0; i < kiss_loop; i++) {
                 if (i < 10) {
@@ -167,7 +163,6 @@
             // load the .pngs
             let loader = new THREE.TextureLoader();
             this.pngArray = [];
-            this.isFound = false;
             let char01_loop = 13;
             for (var i = 0; i < char01_loop; i++) {
                 if (i < 10) {
@@ -199,7 +194,6 @@
             // load the .pngs
             let loader = new THREE.TextureLoader();
             this.pngArray = [];
-            this.isFound = false;
             let char02_loop = 41;
             for (var i = 0; i < char02_loop; i++) {
                 if (i < 10) {
@@ -231,8 +225,7 @@
             // load the .pngs
             let loader = new THREE.TextureLoader();
             this.pngArray = [];
-            this.isFound = false;
-            let char03_loop = 4;
+            let char03_loop = 6;
             for (var i = 0; i < char03_loop; i++) {
                 this.pngArray.push(loader.load('char03/char03' + i + '.png'));
             };
@@ -260,7 +253,6 @@
             // load the .pngs
             let loader = new THREE.TextureLoader();
             this.pngArray = [];
-            this.isFound = false;
             let fireworks01_loop = 72;
             for (var i = 0; i < fireworks01_loop; i++) {
                 if (i < 10) {
@@ -292,8 +284,7 @@
             // load the .pngs
             let loader = new THREE.TextureLoader();
             this.pngArray = [];
-            this.isFound = false;
-            let fireworks02_loop = 301;
+            let fireworks02_loop = 72;
             for (var i = 0; i < fireworks02_loop; i++) {
                 if (i < 10) {
                     i = '0' + i;
@@ -366,6 +357,11 @@
         text-align: center;
         font-size: 1.25em;
         color: white;
+    }
+
+    body {
+        font-family: 'Mitr', sans-serif;
+        font-size: 1em;
     }
 </style>
 
