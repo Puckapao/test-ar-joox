@@ -96,67 +96,67 @@
         }
     })
 
-    AFRAME.registerComponent("guitar", {
-        init: function () {
-            // load the .pngs
-            let loader = new THREE.TextureLoader();
-            this.pngArray = [];
-            let guitar_loop = 46;
-            for (var i = 0; i < guitar_loop; i++) {
-                if (i < 10) {
-                    i = '0' + i;
-                }
-                this.pngArray.push(loader.load('guitar/guitar' + i + '.png'));
-            };
+    // AFRAME.registerComponent("guitar", {
+    //     init: function () {
+    //         // load the .pngs
+    //         let loader = new THREE.TextureLoader();
+    //         this.pngArray = [];
+    //         let guitar_loop = 46;
+    //         for (var i = 0; i < guitar_loop; i++) {
+    //             if (i < 10) {
+    //                 i = '0' + i;
+    //             }
+    //             this.pngArray.push(loader.load('guitar/guitar' + i + '.png'));
+    //         };
 
-            let mesh = this.el.getObject3D("mesh");
-            this.material = mesh.material;
-            var i = 0;
-            this.id = setInterval(e => {
-                if (i >= this.pngArray.length) i = 0;
-                this.material.map = this.pngArray[i++];
-                this.material.needsUpdate = true;
-            }, 1000 / 25);
-        },
-        remove: function () {
-            clearInterval(this.id);
-            // free the memory
-            for (let i = 0; i < this.pngArray.length; i++) {
-                this.pngArray[i].dispose();
-            }
-        }
-    })
+    //         let mesh = this.el.getObject3D("mesh");
+    //         this.material = mesh.material;
+    //         var i = 0;
+    //         this.id = setInterval(e => {
+    //             if (i >= this.pngArray.length) i = 0;
+    //             this.material.map = this.pngArray[i++];
+    //             this.material.needsUpdate = true;
+    //         }, 1000 / 25);
+    //     },
+    //     remove: function () {
+    //         clearInterval(this.id);
+    //         // free the memory
+    //         for (let i = 0; i < this.pngArray.length; i++) {
+    //             this.pngArray[i].dispose();
+    //         }
+    //     }
+    // })
 
-    AFRAME.registerComponent("kiss", {
-        init: function () {
-            // load the .pngs
-            let loader = new THREE.TextureLoader();
-            this.pngArray = [];
-            let kiss_loop = 24;
-            for (var i = 0; i < kiss_loop; i++) {
-                if (i < 10) {
-                    i = '0' + i;
-                }
-                this.pngArray.push(loader.load('kiss/kiss' + i + '.png'));
-            };
+    // AFRAME.registerComponent("kiss", {
+    //     init: function () {
+    //         // load the .pngs
+    //         let loader = new THREE.TextureLoader();
+    //         this.pngArray = [];
+    //         let kiss_loop = 24;
+    //         for (var i = 0; i < kiss_loop; i++) {
+    //             if (i < 10) {
+    //                 i = '0' + i;
+    //             }
+    //             this.pngArray.push(loader.load('kiss/kiss' + i + '.png'));
+    //         };
 
-            let mesh = this.el.getObject3D("mesh");
-            this.material = mesh.material;
-            var i = 0;
-            this.id = setInterval(e => {
-                if (i >= this.pngArray.length) i = 0;
-                this.material.map = this.pngArray[i++];
-                this.material.needsUpdate = true;
-            }, 1000 / 25);
-        },
-        remove: function () {
-            clearInterval(this.id);
-            // free the memory
-            for (let i = 0; i < this.pngArray.length; i++) {
-                this.pngArray[i].dispose();
-            }
-        }
-    })
+    //         let mesh = this.el.getObject3D("mesh");
+    //         this.material = mesh.material;
+    //         var i = 0;
+    //         this.id = setInterval(e => {
+    //             if (i >= this.pngArray.length) i = 0;
+    //             this.material.map = this.pngArray[i++];
+    //             this.material.needsUpdate = true;
+    //         }, 1000 / 25);
+    //     },
+    //     remove: function () {
+    //         clearInterval(this.id);
+    //         // free the memory
+    //         for (let i = 0; i < this.pngArray.length; i++) {
+    //             this.pngArray[i].dispose();
+    //         }
+    //     }
+    // })
 
     AFRAME.registerComponent("char01", {
         init: function () {
@@ -400,7 +400,7 @@
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;">
         <a-nft pnghandler type="nft"
             url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/Puckapao/test-ar-joox/main/joox-full"
-            smooth="true" smoothcount="15" smoothtolerance="0.1" smooththreshold="7">
+            smooth="true" smoothcount="100" smoothtolerance="50" smooththreshold="100">
             <a-plane class="png" position="70 0 -210" rotation="-90 0 0" width="120" height="120" transparent="true"
                 award>
             </a-plane>
